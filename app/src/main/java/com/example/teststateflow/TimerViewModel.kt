@@ -13,8 +13,8 @@ class TimerViewModel : ViewModel() {
 
     fun startTimer() {
         viewModelScope.launch {
-           // val list = listOf<Int>(1, 1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9,10)
-            for (i in 1..10) {
+            val list = listOf<Int>(1, 1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9,10)
+            for (i in list) {
                 _timerStateFlow.emit(i)
                 delay(1000)
             }
